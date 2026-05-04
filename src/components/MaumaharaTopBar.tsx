@@ -26,7 +26,7 @@ export function MaumaharaTopBar({ trailing, subtitle }: Props) {
         </div>
       </div>
       <div className="flex shrink-0 flex-wrap items-center justify-end gap-2 sm:gap-3">
-        <EcosystemAppSwitcher currentWordmark="maumahara" />
+        <EcosystemAppSwitcher />
         {trailing}
       </div>
     </header>
