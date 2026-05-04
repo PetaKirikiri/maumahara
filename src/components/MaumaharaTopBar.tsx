@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react';
 import placeholderLogo from '@/assets/placeholder-logo.png';
+import { EcosystemAppSwitcher } from '@/components/EcosystemAppSwitcher';
 import { EcosystemProductBrand } from '@/components/EcosystemProductBrand';
 
 type Props = {
@@ -24,9 +25,10 @@ export function MaumaharaTopBar({ trailing, subtitle }: Props) {
           ) : null}
         </div>
       </div>
-      {trailing ? (
-        <div className="flex shrink-0 flex-wrap items-center justify-end gap-2 sm:gap-3">{trailing}</div>
-      ) : null}
+      <div className="flex shrink-0 flex-wrap items-center justify-end gap-2 sm:gap-3">
+        <EcosystemAppSwitcher currentWordmark="maumahara" />
+        {trailing}
+      </div>
     </header>
   );
 }
