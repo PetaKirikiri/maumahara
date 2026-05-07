@@ -1,7 +1,5 @@
 import type { ReactNode } from 'react';
-import placeholderLogo from '@/assets/placeholder-logo.png';
 import { EcosystemAppSwitcher } from '@/components/EcosystemAppSwitcher';
-import { EcosystemProductBrand } from '@/components/EcosystemProductBrand';
 
 type Props = {
   /** Right side: course select, profile, sign out */
@@ -16,8 +14,7 @@ export function MaumaharaTopBar({ trailing, subtitle }: Props) {
     <header className="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-3 border-b border-portal-border bg-portal-surface px-4 py-3 shadow-sm sm:px-6">
       <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2 sm:gap-4">
         <div className="flex min-w-0 shrink-0 flex-wrap items-center gap-2">
-          <img src={placeholderLogo} alt="" aria-hidden className="h-7 w-7 rounded-sm object-cover" />
-          <EcosystemProductBrand wordmark="maumahara" />
+          <EcosystemAppSwitcher />
           {subtitle ? (
             <span className="hidden max-w-[min(24rem,40vw)] truncate text-sm font-medium text-portal-muted sm:inline">
               · {subtitle}
@@ -26,7 +23,6 @@ export function MaumaharaTopBar({ trailing, subtitle }: Props) {
         </div>
       </div>
       <div className="flex shrink-0 flex-wrap items-center justify-end gap-2 sm:gap-3">
-        <EcosystemAppSwitcher />
         {trailing}
       </div>
     </header>
